@@ -1,0 +1,68 @@
+.cont{
+
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+    }
+    
+    .card{
+    
+    height: 50vh;
+    width: 30%;
+    border: 1px solid #13544e;
+    border-radius: 5px;
+    text-align: center;
+    
+    
+    }
+    
+    input[type="file"]{
+    
+    width: 16%;
+    height: 22px;
+    padding: 0;
+    
+    }
+    
+
+    input{
+    
+    width: 450px;
+    height: 30px;
+    border: 1px solid #13544e;
+    border-radius: 3px;
+    color: #13544e;
+    margin-top: 10px;
+    padding-left: 10px;
+    
+    }
+    
+    input:hover{
+    
+        border: 2px solid #13544e;
+    box-shadow: 1px 1px 7px black;
+    transition: 0.3s;
+    
+    }
+    
+    .sub_card{
+    
+    width: 100%;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    }
+    
+    ::placeholder{
+    
+    color: #13544e;
+    
+    }
+
+    select{
+
+        height: 35px;
+        width: 82%;
+
+    }

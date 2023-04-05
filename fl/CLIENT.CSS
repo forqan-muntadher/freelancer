@@ -1,0 +1,81 @@
+.cont{
+
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+
+}
+
+.card{
+
+width: 40%;
+height: 80%;
+border: 2px solid #13544e;
+border-radius: 10px;
+text-align: center;
+display: grid;
+place-items: center;
+
+}
+
+
+.card button{
+
+width: 80%;
+height: 40px;
+border-radius: 20px;
+border: 0px;
+background-color:#13544e;
+color: white;
+
+}
+
+.card button:hover{
+
+    box-shadow: 1px 1px 7px black;
+transition: 0.3s;
+
+}
+
+
+.sub_card input{
+
+width: 80%;
+height: 35px;
+border: 1px solid #13544e;
+border-radius: 5px;
+margin-bottom: 15px;
+}
+.sub_card input:hover{
+
+    border: 2px solid #13544e;
+    box-shadow: 1px 1px 7px black;
+    transition: 0.3s;
+
+
+}
+
+::placeholder{
+
+color: #13544e;
+
+}
+
+.b{
+
+background-color: #13544e;
+
+}
+
+.checkbox{
+
+display:inline-flex;
+align-items: left;
+
+}
+input[type="checkbox"]{
+
+height: 16px;
+width: 15px;
+}
