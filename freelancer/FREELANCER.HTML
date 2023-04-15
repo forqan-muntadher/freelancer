@@ -1,54 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="./FREELANCER.CSS"></head>
+	<title>Sign Up | Freelancer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="FREELANCER.CSS">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+</head>
 <body>
+	<header>
+		<div class="container1">
+			<a href="#" class="logo">Freelancer</a>
+			<nav>
+				<ul>
+					<li><a href="#">Find Work</a></li>
+					<li><a href="#">How It Works</a></li>
+					<li><a href="#">About Us</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
 
-    <div class="cont">
+	<section class="hero">
+		<div class="container1">
+			<h1>Sign as Freelancer</h1>
+		</div>
+	</section>
 
-        <div class="card">
-
-<h1>Sign up to find work you love</h1>
-<div class="m1"><p style="margin: 0;">Continue with Google</p></div>
-          or
-
- <hr style="width: 50%;">
-
-            
-             <div class="sub_card">
-
-                <form action="">
-                    <input style="width: 297px;" type="text" placeholder="First name">
-                    <input style="width: 297px;" type="text" placeholder="Last name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="text" placeholder="Select a country"><br>
-                    <label class="checkbox" for="checkbokid">
-
-                        <input class="checkbox_input" type="checkbox" name="" id="checkbokid">
-                        Send me helpful email to find rewarding  work and job leads
-
-                    </label><br>
-                    
-                                      </form>
-
-                                      <div onclick="window.location.href='HOME.html'" class="m2">creat my account</div>
+	<section class="form">
+		<div class="container">
+			<form  action="freelancer.php" method="post">
 
 
-            </div>
-            
-            <hr style="width: 50%;">
-           <p>Already have an account? &nbsp;&nbsp;&nbsp;&nbsp;<a style="color: #13544e; text-decoration: none;" href="homeP.html">LOG IN</a></p> 
+				<label >Firstname</label>
+				<input type="text"  name="firstname" required>
+
+                <label >Lastname</label>
+				<input type="text"  name="lastname" required>
+		
+
+				<label >Email</label>
+				<input type="email" name="email" required>
 
 
+				<label >Password</label>
+				<input type="password" name="password" required>
 
-        </div>
 
-    </div>
-    
+                <label >Country</label>
+				<select  name="country" required>
+				
+			    <option >Iraq</option>
+				<option >Iran</option>
+				<option >America</option>
+				<option >French</option>
+				<option >Spanish</option>
+				<option >India</option>
+				<option >Russia</option>
+				<option >Italy</option>
+							    
+                </select>
+
+				<button id="button" class="last" type="submit">Sign UP</button>
+
+			</form>
+		</div>
+	</section>
+
+	
+
 </body>
 </html>
