@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="create_profile.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 	<header>
@@ -102,6 +103,30 @@
 			</form>
 		</div>
 	</section>
+
+	
+	<script>let timerInterval
+		Swal.fire({
+		  title: 'Execution!',
+		  html: 'I will finish in <b></b> milliseconds.',
+		  timer: 2000,
+		  timerProgressBar: true,
+		  didOpen: () => {
+			Swal.showLoading()
+			const b = Swal.getHtmlContainer().querySelector('b')
+			timerInterval = setInterval(() => {
+			  b.textContent = Swal.getTimerLeft()
+			}, 100)
+		  },
+		  willClose: () => {
+			clearInterval(timerInterval)
+		  }
+		}).then((result) => {
+		  /* Read more about handling dismissals below */
+		  if (result.dismiss === Swal.DismissReason.timer) {
+			console.log('I was closed by the timer')
+		  }
+		})</script>
 
 </body>
 </html>
