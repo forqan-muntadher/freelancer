@@ -8,25 +8,30 @@ $conn = mysqli_connect($servername, $username, $password, $db);
 
 
 
- // POST the form data
 
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// collect user input from login form
 $email = $_POST['email'];
 $password = $_POST['password'];
 
+// query the database to check if the email and password match
+$sql = "SELECT * FROM login_tb WHERE email='$email' AND passwordd='$password'";
+$result = mysqli_query($conn, $sql);
 
-
-
-//sql query
-$sql = "INSERT INTO login_tb ( email, passwordd )
-         VALUES ( '$email', '$password');";
-
-//check sql process
-if (mysqli_query($conn, $sql)) {
-  
-  echo "process completed";
-
+// check if there is a match
+if (mysqli_num_rows($result) == 1) {
+  // email and password are correct
+  echo "Login successful!";
 } else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  // email and/or password are incorrect
+  echo "Invalid email or password.";
 }
+
+// close the database connection
+mysqli_close($conn);
+
 
 ?>
