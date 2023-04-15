@@ -34,8 +34,9 @@ $sql = "INSERT INTO profile_tb (namee,  purview  ,age  , country  ,city ,  addre
 
 //check sql process
 if (mysqli_query($conn, $sql)) {
-  
-  echo "insert record sccessfully";
+
+  header("location: create_profile.html");
+  exit;
 
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
