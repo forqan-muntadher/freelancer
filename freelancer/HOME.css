@@ -118,98 +118,57 @@ padding-left: 10px;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-.main2{
-
-height: 150vh;
-background-color: #13544e;
-display: grid;
-place-items: center;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-
+/* section resulte */
+.box h3 {
+  position: relative;
 }
+.resulte .box-container{ 
+    width:85%; 
+    display: flex; 
+    justify-content: center; 
+    margin:0 auto; 
+    padding-top: 4rem; 
+    flex-wrap: wrap; 
+} 
+
+.resulte .box-container .box{ 
+    height:18rem; 
+    width:25rem; 
+    margin:3.5rem 2rem; 
+    text-align: center; 
+    border-radius: 1rem; 
+    box-shadow: .3rem .3rem 0 .1rem #13544e, .5rem .5rem .5rem rgba(0,0,0,.3); 
+} 
+
+.resulte .box-container .box i{ 
+    height:10rem; 
+    width:10rem; 
+    line-height: 8rem; 
+    text-align: center; 
+    color:#fff; 
+    border-radius: 50%; 
+    background:#1c655e; 
+    margin-top: -4rem; 
+    border:1rem solid #fff; 
+    border-left:1rem solid #1c655e; 
+    border-right:1rem solid #1c655e; 
+    box-shadow: 0 0 0 1rem #fff inset; 
+    font-size: 3.5rem; 
+} 
+
+.resulte .box-container .box h3{ 
+    font-size: 2rem; 
+    color:#1c655e; 
+} 
+
+.resulte .box-container .box p{ 
+    font-size: 2.5rem; 
+    color:#999; 
+    padding:0 0; 
+} 
 
 
-.main2_cont{
 
-width: 20%;
-height: 45vh;
-background-color: #fff;
-border-radius: 5px;
-margin: auto 10px;
-display: grid;
-place-items: center;
-position: relative;
-box-shadow: 2px 2px 20px black;
-color: #13544e;
-
-}
-
-.main2_cont:hover{
-
-    background-color: rgba(255, 255, 255,0.2);
-    transition: 0.6s;
-    color: #fff;
-
-}
-
-
-h3{
-
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    margin: auto;
-
-}
-
-h1{
-
-    margin: auto;
-    margin-top: 220px;
-
-
-}
-
-img{
-
-margin: auto;
-width: 50%;
-height: 45%;
-border-radius: 50px;
-position: absolute;
-top: 20px;
-
-
-}
-
-table{
-
-width: 90%;
-margin: auto;
-text-align: center;
-}
-table td{
-
-background-color:#13544e;
-border-radius: 5px;
-border: px solid #13544e;
-color: #fff;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
 
 .cont_more{
 
@@ -242,20 +201,7 @@ transition: 0.3s;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* contact us section */
 
 .main3{
 
