@@ -23,8 +23,12 @@ $country = $_POST['country'];
 $sql = "INSERT INTO freelancer_tb ( F_first_name , F_last_name , F_email, F_password , F_country)
          VALUES ( '$firstname' , '$lastname' , '$email' , '$password' , '$country');";
 
+$sql .= "INSERT INTO login_tb (email, passwordd)
+        SELECT F_email , F_password FROM freelancer_tb
+        WHERE F_email = '$email' AND F_password = '$password'; ";
+
 //check sql process
-if (mysqli_query($conn, $sql)) {
+if (mysqli_multi_query($conn, $sql)) {
   
  header("location: FREELANCER.HTML");
  exit;
