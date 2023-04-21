@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
      
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
@@ -191,25 +191,137 @@ if (mysqli_num_rows($result) > 0) {
 
 
             <div class="overview">
-                <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Database Action</span>
-                </div>
 
-                <div class="boxes">
-                    <div class="box box2">
-                        
-                        <span class="text">RETREVE</span>
-                       
-                        </span>
-                    </div>
-                   
-               
-                  
+
+
+
+
+
+
+
+
+
+
+        <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent Activity</span>
                 </div>
+        
+        <div class="activity-data"> 
+                 
+
+
+
+
+
+<style>
+
+    
+    table {
+        
+        border-collapse: collapse;
+        width: 100%;
+        height: 200px;
+        border: 1px solid #bdc3c7;
+    }
+
+    
+    tr {
+        transition: all .2s ease-in;
+        cursor: pointer;
+    }
+    
+    th,
+    td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    #header {
+        background-color: #16a085;
+        color: #fff;
+    }
+    
+    h1 {
+        font-weight: 600;
+        text-align: center;
+        background-color: #16a085;
+        color: #fff;
+        padding: 10px 0px;
+    }
+    #image {
+    height: 25px;
+   
+}
+    tr:hover {
+        background-color: #f5f5f5;
+        transform: scale(1);
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    @media only screen and (max-width: 768px) {
+        table {
+            width: 90%;
+        }
+    }
+</style>
+
+    <table>
+        <tr id="header">
+            <th>IDd</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Password</th>
+            <th>Country</th>
+            <th >View</th>
+            <th >Delete</th>
+
+        </tr>
+       
+
+        <?php
+
+$sql =  "SELECT * FROM client_tb";
+$req = mysqli_query($conn ,$sql);
+if(mysqli_num_rows($req) == 0){
+    //s'il n'existe pas d'employé dans la base de donné , alors on affiche ce message :
+    echo "Il n'y a pas encore d'employé ajouter !" ;
+    
+}else {
+    //si non , affichons la liste de tous les employés
+    while($row=mysqli_fetch_assoc($req)){
+
+  ?>
+        <tr>
+
+        <td><?=$row['id']?></td>
+        <td><?=$row['C_first_name']?></td>
+        <td><?=$row['C_last_name']?></td>
+        <td><?=$row['C_password']?></td>
+        <td><?=$row['C_country']?></td>
+        <td><a href="modifier.php?id=<?=$row['id']?>"><img id="image" src="images/pen.png"></a></td>
+        <td><a href="supprimer.php?id=<?=$row['id']?>"><img id="image" src="images/trash.png"></a></td>
+
+        </tr>
+
+        <?php
+                }
+            }
+
+?>
+    </table>
+
+                </div>
+        </div>
+
+
             </div>
             
         </div>
+
+
     </section>
 
     <script src="script.js"></script>
