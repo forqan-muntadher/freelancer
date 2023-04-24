@@ -177,7 +177,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
 
-                <!-- section main --> 
+                <!-- section contact us --> 
 
 
 
@@ -190,6 +190,7 @@ if (mysqli_num_rows($result) > 0) {
                     
                     <div class="main3">
 
+                    <form action="contactus.php" method="post">
 
                         <div class="cont_main3">
 
@@ -200,15 +201,15 @@ if (mysqli_num_rows($result) > 0) {
                             
                             <div class="input1">
                                 <span><i class="fa-solid fa-user"></i></span>
-                                <input type="text" placeholder="name">
+                                <input type="text" placeholder="name" name="name">
                             </div>
                             <div class="input1">
                                 <span><i class="fa-solid fa-envelope"></i></span>
-                                <input type="email" placeholder="email">
+                                <input type="email" placeholder="email" name="email">
                             </div>
                             <div class="input2">
                                 <span><i class="fa-solid fa-inbox"></i></span>
-                                <input type="text" placeholder="message">
+                                <input type="text" placeholder="message" name="message">
                             </div>
                             <div class="input1">
                                 <span><i class="fa-solid fa-paper-plane"></i></span>
@@ -218,7 +219,7 @@ if (mysqli_num_rows($result) > 0) {
 
 
                         </div>
-
+                    </form>
 
                     </div>
 
@@ -227,6 +228,10 @@ if (mysqli_num_rows($result) > 0) {
 
 
                 </section>
+
+
+                <!-- About section -->
+
 
                 <section id="About">
 
