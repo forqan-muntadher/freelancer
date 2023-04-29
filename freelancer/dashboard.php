@@ -205,7 +205,7 @@ if (mysqli_num_rows($result) > 0) {
         <div class="activity">
                 <div class="title">
                     <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Activity</span>
+                    <span class="text">Recent client Activity</span>
                 </div>
         
         <div class="activity-data"> 
@@ -270,7 +270,7 @@ if (mysqli_num_rows($result) > 0) {
 
     <table>
         <tr id="header">
-            <th>IDd</th>
+            <th>ID</th>
             <th>First name</th>
             <th>Last name</th>
             <th>Password</th>
@@ -286,11 +286,9 @@ if (mysqli_num_rows($result) > 0) {
 $sql =  "SELECT * FROM client_tb";
 $req = mysqli_query($conn ,$sql);
 if(mysqli_num_rows($req) == 0){
-    //s'il n'existe pas d'employé dans la base de donné , alors on affiche ce message :
-    echo "Il n'y a pas encore d'employé ajouter !" ;
+    echo "not successful" ;
     
 }else {
-    //si non , affichons la liste de tous les employés
     while($row=mysqli_fetch_assoc($req)){
 
   ?>
@@ -301,8 +299,69 @@ if(mysqli_num_rows($req) == 0){
         <td><?=$row['C_last_name']?></td>
         <td><?=$row['C_password']?></td>
         <td><?=$row['C_country']?></td>
-        <td><a href="modifier.php?id=<?=$row['id']?>"><img id="image" src="images/pen.png"></a></td>
-        <td><a href="supprimer.php?id=<?=$row['id']?>"><img id="image" src="images/trash.png"></a></td>
+        <td><a href="C_modification.php?id=<?=$row['id']?>"><img id="image" src="images/pen.png"></a></td>
+        <td><a href="delete_client.php?id=<?=$row['id']?>"><img id="image" src="images/trash.png"></a></td>
+
+        </tr>
+
+        <?php
+                }
+            }
+
+?>
+    </table>
+
+                </div>
+        </div>
+
+
+        <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Recent freelancer Activity</span>
+                </div>
+        
+        <div class="activity-data"> 
+                 
+
+
+
+
+
+
+    <table>
+        <tr id="header">
+            <th>ID</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Password</th>
+            <th>Country</th>
+            <th >View</th>
+            <th >Delete</th>
+
+        </tr>
+       
+
+        <?php
+
+$sql =  "SELECT * FROM freelancer_tb";
+$req = mysqli_query($conn ,$sql);
+if(mysqli_num_rows($req) == 0){
+    echo "not successful" ;
+    
+}else {
+    while($row=mysqli_fetch_assoc($req)){
+
+  ?>
+        <tr>
+
+        <td><?=$row['id']?></td>
+        <td><?=$row['F_first_name']?></td>
+        <td><?=$row['F_last_name']?></td>
+        <td><?=$row['F_password']?></td>
+        <td><?=$row['F_country']?></td>
+        <td><a href="F_modification.php?id=<?=$row['id']?>"><img id="image" src="images/pen.png"></a></td>
+        <td><a href="delete_freelancer.php?id=<?=$row['id']?>"><img id="image" src="images/trash.png"></a></td>
 
         </tr>
 
