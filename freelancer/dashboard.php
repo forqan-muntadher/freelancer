@@ -59,6 +59,8 @@ if (mysqli_num_rows($result) > 0) {
     <link rel="stylesheet" href="dashboard.css">
      
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 
     <title>Admin Dashboard Panel</title> 
 </head>
@@ -108,15 +110,61 @@ if (mysqli_num_rows($result) > 0) {
         <div class="top">
             <i class="uil uil-bars sidebar-toggle"></i>
 
-            <div class="search-box">
-                <i class="uil uil-search"></i>
-                <input type="text" placeholder="Search here...">
-            </div>
-            
-            <img src="images/unnamed.jpg" alt="">
         </div>
 
         <div class="dash-content">
+
+
+        <div class="container" style="max-width: 50%;">
+
+<div class="text-center mt-5 mb-4">
+    <h2>php mysql search</h2>
+</div>
+
+<input type="text" class="form-control"  id="live_search" autocomplete="off" placeholder="search ...">
+
+</div>
+
+<div id="searchresult"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+<script type="text/javascript">
+
+    $(document).ready(function(){
+
+        $("#live_search").keyup(function(){
+
+            var input = $(this).val();
+
+           if (input !="") {
+            
+            $.ajax({
+                url:"dashboard_search.php",
+                method:"POST",
+                data:{input:input},
+
+                success:function(data){
+                    $("#searchresult").html(data);
+                    $("#searchresult").css("display","block");
+
+                }
+
+            });
+           }else {
+
+            $("#searchresult").css("display","none");
+
+           }
+        });
+    });
+
+</script>
+
+
+
+
+
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-tachometer-fast-alt"></i>
@@ -283,7 +331,7 @@ if (mysqli_num_rows($result) > 0) {
 
         <?php
 
-$sql =  "SELECT * FROM client_tb";
+$sql =  "SELECT * FROM client_tb LIMIT 5";
 $req = mysqli_query($conn ,$sql);
 if(mysqli_num_rows($req) == 0){
     echo "not successful" ;
@@ -344,7 +392,7 @@ if(mysqli_num_rows($req) == 0){
 
         <?php
 
-$sql =  "SELECT * FROM freelancer_tb";
+$sql =  "SELECT * FROM freelancer_tb LIMIT 5";
 $req = mysqli_query($conn ,$sql);
 if(mysqli_num_rows($req) == 0){
     echo "not successful" ;
@@ -379,6 +427,8 @@ if(mysqli_num_rows($req) == 0){
             </div>
             
         </div>
+
+        <br><br><br>
 
 
     </section>
