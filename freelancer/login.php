@@ -23,11 +23,15 @@ $result = mysqli_query($conn, $sql);
 
 // check if there is a match
 if (mysqli_num_rows($result) == 1) {
-  // email and password are correct
-  echo "Login successful!";
+
+  header("location: HOME.php");
+  exit;
+
 } else {
-  // email and/or password are incorrect
-  echo "Invalid email or password.";
+
+  echo '<script>alert("error your data incorrect."); window.location.href = "login.html";</script>';
+
+
 }
 
 // close the database connection
