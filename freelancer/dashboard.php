@@ -218,7 +218,7 @@ if (mysqli_num_rows($result) > 0) {
                 <div class="overview">
 
                 <div class="boxes">
-                    <div class="box box3">
+                    <div class="box box3" style="cursor: cell;" onclick="location.href='index.php'">
                         
                         <span class="text">CREATE</span>
                         
