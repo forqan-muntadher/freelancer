@@ -6,8 +6,8 @@ if (isset($_POST['input'])) {
     
     $input = $_POST['input'];
 
-    $query = "SELECT * FROM client_tb WHERE C_first_name LIKE '{$input}%' OR C_last_name LIKE '{$input}%'  OR C_email LIKE '{$input}%' 
-    OR C_password LIKE '{$input}%'  OR  C_country  LIKE '{$input}%' LIMIT 3  ";
+    $query = "SELECT * FROM srch_data WHERE C_first_name LIKE '{$input}%' OR C_last_name LIKE '{$input}%'  OR C_email LIKE '{$input}%' 
+    OR C_password LIKE '{$input}%'  OR  C_country  LIKE '{$input}%' LIMIT 4 ";
 
     $result = mysqli_query($conn , $query);
 
