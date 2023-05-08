@@ -7,7 +7,7 @@ $conn = mysqli_connect($servername, $username, $password,$db);
  
 
 // to show subscriber
-$sql = "SELECT COUNT(*) as count FROM login_tb;";
+$sql = "SELECT COUNT(*) as count FROM srch_data;";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

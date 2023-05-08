@@ -40,7 +40,7 @@ if (mysqli_num_rows($result) > 0) {
 <body>
   <header>
     <div class="container">
-      <img src="./Images/unnamed.jpg" alt="Profile picture">
+      <img src="freelancer.png" alt="Profile picture">
       <div class="header-info">
         <h1><?php
         echo $name;
@@ -106,30 +106,30 @@ if (mysqli_num_rows($result) > 0) {
       <section class="skills">
         <h2>info</h2>
         <ul>
-          <label>Age......</label>
+          <label>Age:</label>
           <li><?php
         echo $age;
-        ?></li><br>
-          <label>Phone..</label>
+        ?></li>
+          <label>Phone:</label>
           <li><?php
         echo $phone;
-        ?></li><br>
-          <label>Country</label>
+        ?></li>
+          <label>Country:</label>
           <li><?php
         echo $country;
-        ?></li><br>
-          <label>City.......</label>
+        ?></li>
+          <label>City:</label>
           <li><?php
         echo $city;
-        ?></li><br>
-          <label>Address</label>
+        ?></li>
+          <label>Address:</label>
           <li><?php
         echo $address;
-        ?></li><br>
-          <label>Zipcode</label>
+        ?></li>
+          <label>Zipcode:</label>
           <li><?php
         echo $zip;
-        ?></li><br>
+        ?></li>
         </ul>
       </section>
       <hr>

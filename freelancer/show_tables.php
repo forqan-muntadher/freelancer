@@ -29,7 +29,7 @@ if(isset($_GET['db'])){
     }else {
         // display the list of tables in a table
         echo "<table>";
-        echo "<tr><th>Table Name</th></tr>";
+        echo "<tr><th> <h3>$db</h3><hr> Tables</th></tr>";
         while($row=mysqli_fetch_row($req)){
             echo "<tr><td>" . $row[0] . "</td></tr>";
         }

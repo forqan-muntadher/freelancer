@@ -9,7 +9,7 @@ $conn = mysqli_connect($servername, $username, $password,$db);
  
 
 // to calculate number of user
-$sql = "SELECT COUNT(*) as user_count FROM login_tb;";
+$sql = "SELECT COUNT(*) as user_count FROM srch_data;";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
