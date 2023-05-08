@@ -23,7 +23,7 @@
             echo "<table>";
             echo "<tr><th>Database Name</th></tr>";
             while($row=mysqli_fetch_assoc($req)){
-                echo "<tr><td><a href=\"show_tables.php?db=" . $row['Database'] . "\">" . $row['Database'] . "</a></td></tr>";
+                echo "<tr><td><a style=\" text-decoration: none;\"; href=\"show_tables.php?db=" . $row['Database'] . "\">" . $row['Database'] . "</a></td></tr>";
             }
             echo "</table>";
         }

@@ -67,7 +67,7 @@ if (mysqli_num_rows($result) > 0) {
                 <ul>
 
                     <li class="fa-solid fa-house">&nbsp;&nbsp;<a href="#main">Home</a> </li>
-                    <li class="fa-solid fa-address-card">&nbsp;&nbsp;<a href="create_profile.html" >Create Profile</a> </li>
+                    <li class="fa-solid fa-address-card">&nbsp;&nbsp;<a href="create_profile.php" >Create Profile</a> </li>
                     <li class="fa-solid fa-inbox">&nbsp;&nbsp;<a href="#Contact_Us"> Contact Us</a></li>
 
                 </ul>

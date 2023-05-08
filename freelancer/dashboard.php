@@ -80,9 +80,9 @@ if (mysqli_num_rows($result) > 0) {
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Dahsboard</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="index.php">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="link-name">Content</span>
+                    <span class="link-name">CREATE DATABASE</span>
                 </a></li>
             </ul>
             
@@ -331,7 +331,7 @@ if (mysqli_num_rows($result) > 0) {
 
         <?php
 
-$sql =  "SELECT * FROM client_tb LIMIT 5";
+$sql =  "SELECT * FROM client_tb ORDER BY id DESC LIMIT 5";
 $req = mysqli_query($conn ,$sql);
 if(mysqli_num_rows($req) == 0){
     echo "not successful" ;
@@ -392,7 +392,7 @@ if(mysqli_num_rows($req) == 0){
 
         <?php
 
-$sql =  "SELECT * FROM freelancer_tb LIMIT 5";
+$sql =  "SELECT * FROM freelancer_tb ORDER BY id DESC LIMIT 5";
 $req = mysqli_query($conn ,$sql);
 if(mysqli_num_rows($req) == 0){
     echo "not successful" ;
