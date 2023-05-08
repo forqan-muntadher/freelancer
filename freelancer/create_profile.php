@@ -50,9 +50,8 @@ if(isset($_POST['button'])) {
 			<a href="#" class="logo">Smart</a>
 			<nav>
 				<ul>
-					<li><a href="#">Find Work</a></li>
 					<li><a href="HOME.php">Home</a></li>
-					<li><a href="#">About Us</a></li>
+					<li><a href="">How IT Work</a></li>
 					<li><a href="#">Contact Us</a></li>
 				</ul>
 			</nav>
