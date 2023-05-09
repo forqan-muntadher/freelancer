@@ -84,6 +84,10 @@ if (mysqli_num_rows($result) > 0) {
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">CREATE DATABASE</span>
                 </a></li>
+                <li><a href="./datatable-order-fixed/">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">ADMIN USERS</span>
+                </a></li>
             </ul>
             
             <ul class="logout-mode">
